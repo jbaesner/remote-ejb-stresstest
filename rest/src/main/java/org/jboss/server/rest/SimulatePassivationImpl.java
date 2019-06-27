@@ -34,7 +34,7 @@ public class SimulatePassivationImpl implements SimulatePassivation {
 
             int result = new Random().nextInt(100) * new Random().nextInt(100);
 
-            UnserializableData data = new UnserializableData("Thread-" + Thread.currentThread().getId(), UUID.randomUUID().toString(), result);
+            UnserializableData data = new UnserializableData("Thread-" + Thread.currentThread().getId(), UUID.randomUUID().toString(), result, new Object());
             
             logger.infof("trigger passivation on %s", data);
             

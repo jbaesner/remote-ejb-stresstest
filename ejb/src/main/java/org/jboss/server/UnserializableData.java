@@ -21,13 +21,15 @@ public class UnserializableData {
     private String thread;
     private String uuid;
     private int result;
+    private Object notSerializable;
 
-    public UnserializableData(String string, String uuid, int i) {
+    public UnserializableData(String string, String uuid, int i, Object notSerializable) {
         this.thread = string;
         this.uuid = uuid;
         this.result = i;
+        this.notSerializable = notSerializable;
     }
-    
+
     public int getResult() {
         return this.result;
     }    
